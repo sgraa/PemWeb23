@@ -1,0 +1,318 @@
+@font-face {	font-family:'QItalic';
+	src: url(QESTERO-Italic-BF641819333de95.ttf) format('truetype');
+	font-weight: italic;
+}
+@font-face {
+	font-family:'QRegular';
+	src: url(QESTERO-Regular-BF6418193337034.ttf) format('truetype');
+	font-weight: normal;
+}
+
+html{scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+
+}
+body{
+    font-family: 'QRegular';
+    overflow-x: hidden;
+	font-size: medium;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: #182c25	; 
+    color:whitesmoke;
+    justify-content: space-around;
+    padding: 20px;
+
+}
+
+nav .logo{
+    font-family: 'Qregular', sans-serif;
+    letter-spacing: 2px;
+	font-size:larger;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav ul li a:hover{
+    color: gray
+}
+
+/* Menu */
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    opacity: 0;
+    left: -6px;
+    top: -3px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+/* Home */
+.main{
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    height: 680px;
+    justify-content: center;
+    background-color: #1e453e	;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.nama{
+    font-family: 'QReqular', Italic;
+    letter-spacing: 2px;
+
+}
+
+.foto{
+    height: 450px;
+    margin: 25px;
+    border: whitesmoke;
+    border-style: solid ;
+    border-width: 3px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    ; 
+    
+}
+
+.btn{
+    margin: 25px;
+    padding: 10px 35px;
+    color: whitesmoke;
+    background-color: transparent;
+    border: 3px solid whitesmoke;
+    border-radius: 5px;
+    
+}
+
+.btn:hover{
+    background-color: whitesmoke;
+    color: #1e453e	;
+}
+
+/* About */
+#About{
+    background-color: #182c25	;
+    padding: 25px;
+    
+}
+
+.headingabout{
+    font-family: 'Climate Crisis', cursive;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+.paragrafabout{
+    margin: 20px
+}
+
+.tentang{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    margin-right: 10%;
+    margin-left: 10%;
+    justify-content: center;
+    
+}
+
+/* Fields */
+#Fields{
+    background-color:#1e453e	;
+    padding: 25px;
+    color: whitesmoke;
+}
+
+.headingfields{
+    font-family: 'Climate Crisis', cursive;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+.paragraffields{
+    margin: 20px
+}
+
+.prefields{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    margin-right: 10%;
+    margin-left: 10%;
+    justify-content: center;
+}
+
+.iconset{
+    height: 50%;
+    width: 50%;
+    margin: 20px;
+}
+
+.rowicon {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+  .rowicon::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.colicon {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconset2{
+    height: 25%;
+    width: 25%;
+    margin: 40px;
+
+}
+
+.colicon2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.embed{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Gallery */
+#Gallery{
+    background-color: #182c25	;
+    padding: 25px;
+    color: whitesmoke;
+}
+
+.slapur{
+    text-align: center;
+    margin: 25px;
+
+}
+
+/* responsive */
+
+/* tablet sized */
+@media screen and (max-width: 768px) {
+    .menu-toggle{
+        display: none;
+    }
+    nav ul {
+        width: 60%
+    }
+}
+
+/* mobile sized */
+/* navbar pada mobile berubah menjadi dropdown menu (menggunakan js) */
+@media screen and (max-width: 576px) {
+    .menu-toggle{
+        display:flex;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        background-color: #182c25	;
+        align-items: center;
+        justify-content: space-evenly;
+        z-index: -1;
+        transform: translateX(100%);
+        transition: all 1s;
+    }
+}
+
+nav ul.slide{
+    transform: translateX(0)
+}
+
+/* Contact */
+#Contact{
+    background-color: #1e453e	);
+    padding: 20px;
+	color: whitesmoke;
+    
+}
+
+.headingcont{
+    font-family: 'Climate Crisis', cursive;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+
+.paragrafcont{
+    margin: 20px
+}
+
+.cont{
+    display: flex;
+	font-size:large;
+    flex-direction: column;
+    color: whitesmoke;
+    margin-right: 10%;
+    margin-left: 10%;
+    justify-content: center;
+    
+}
