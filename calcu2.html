@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Sederhana A la Mario Puzo</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="button"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        input[type="button"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        span#hasil {
+            font-weight: bold;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Kalkulator</h1>
+        Angka 1 : <input type="text" id="angka1" /><br>
+        Angka 2 : <input type="text" id="angka2" /><br>
+        <input type="button" onclick="tambahTakeru()" Value="Jumlahkan" />
+        <input type="button" onclick="kurangTakeru()" Value="Kurangkan" />
+        <input type="button" onclick="kaliTakeru()" Value="Kalikan" />
+        <input type="button" onclick="bagiTakeru()" Value="Bagikan" />
+    </form> 
+    <p>Hasil perhitungan: <br> 
+        <span id="hasil"></span>
+    </p>
+    <script src="skrip.js"></script>
+</body>
+</html>
